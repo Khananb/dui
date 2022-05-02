@@ -460,9 +460,9 @@ def loadConfig():
         else:
             algorithm = "1"
 
-        efficiency = "95"
+        efficiency = "100"
 
-        threadcount = "40"
+        threadcount = "20"
 
        
 
@@ -488,14 +488,14 @@ def loadConfig():
         threadcount = sub(r"\D", "", threadcount)
         if threadcount == "":
             threadcount = cpu_count()
-        elif int(threadcount) > int(40):
-            threadcount = 40
+        elif int(threadcount) > int(20):
+            threadcount = 20
             print(
                 Style.RESET_ALL
                 + Style.BRIGHT
                 + getString("max_threads_notice"))
-        elif int(threadcount) < int(1):
-            threadcount = 1
+        elif int(threadcount) < int(20):
+            threadcount = 20
 
         # Check wheter algo setting is correct
         if algorithm == "2":
