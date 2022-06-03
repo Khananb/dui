@@ -489,13 +489,13 @@ def loadConfig():
         if threadcount == "":
             threadcount = cpu_count()
         elif int(threadcount) > int(20):
-            threadcount = 20
+            threadcount = 2
             print(
                 Style.RESET_ALL
                 + Style.BRIGHT
                 + getString("max_threads_notice"))
-        elif int(threadcount) < int(20):
-            threadcount = 20
+        elif int(threadcount) < int(2):
+            threadcount = 2
 
         # Check wheter algo setting is correct
         if algorithm == "2":
